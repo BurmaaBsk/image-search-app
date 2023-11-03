@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var output = "Welcome " + name;
+            var emailOutput = email;
+            if(name == "" || email ==""){
+                alert("name and email must be filled out");
+                return false;
+            } else{
+                document.getElementById("output1").innerHTML = output;
+                document.getElementById("output2").innerHTML = emailOutput;
+            }
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("email").innerHTML = email;
+            console.log(name);
+            console.log(email);
+            event.preventDefault();
+        }
+    </script>
+</head>
+
+<body style="background-color: fuchsia; text-align: center;">
+    <h2>Form Validation Example</h2>
+    <form name="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name = "name"/>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name = "email" />
+        <input type="submit" value="submit" />
+    </form>
+    <h1 id="output1"></h1>
+    <h3 id="output2"></h3>
+
+</body>
+
+</html>

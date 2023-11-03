@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h2, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h2>Learning conditional statement</h2>
+    <p>Addition </p>
+    <p>How old are you now</p>
+    <p id="demo"></p>
+    <p id="ans"></p>
+    <script>
+        var time = new Date().getHours();
+        var Greeting;
+        let age = 15;
+        var answer;
+        if(age >= 18){
+            answer = "You are an adult";
+        } else {
+            answer = "You are a minor";
+        }
+        if(time < 10){
+            Greeting = "Good Morning"
+        } else if(time < 20){
+            Greeting ="Good Day"
+        } else {
+            Greeting = "Good Evening"
+        }
+    //     function cond(name){
+    //     if (name === "Burmaa") {
+    //         alert("You are a student");
+    //     } else {
+    //         alert("You are a teacher");
+    //     }
+    // }
+    //     cond("Burmaa");
+        document.getElementById("demo").innerHTML = age;   
+        document.getElementById("ans").innerHTML = answer;
+    </script>
+</body>
+</html>

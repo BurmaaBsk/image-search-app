@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aquamarine; text-align: center;">
+    <h1>Age Declaration App</h1>
+    <p>How old are you now?</p>
+    <input type="number" placeholder="Enter your age here" id="age-input"/>
+    <button onclick="return age()">submit</button>
+    <h1 id="result"></h1>
+    <h1 id="res"></h1>
+    <button onclick="return getDate()">click here to get todays date</button>
+    <h1 id="date"></h1>
+    <script>
+        function getDate(){
+            console.log(new Date());
+            document.getElementById("date").innerHTML = new Date();
+        }
+        function age(){
+            var inp = document.getElementById("age-input").value;
+            console.log(inp);
+            document.getElementById("result").innerHTML = inp;
+            var answer;
+            if (inp >= 18){
+                answer = " pretty";
+            } else{
+                answer = "ugly ♥";
+            }
+            console.log(answer);
+            document.getElementById("res").innerHTML = answer;
+        } 
+    </script>
+
+
+</body>
+</html>

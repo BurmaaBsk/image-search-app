@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <marquee>Bi henbe hehe</marquee>
+    <h1>Form Evalidation Example</h1>
+    <form id="form-input" onsubmit="return validateForm()">
+        <div class="input1">
+            <label for="">Name:</label>
+            <input id="name" class="text-input" type="text" placeholder="Enter your name">
+            <p id="error1"></p>
+        </div>
+        <div class="input1">
+            <label for="">Email:</label>
+            <input id="email" class="text-input" type="email" placeholder="Enter your email">
+            <p id="error2"></p>
+        </div>
+        <input value="submit" type="submit" id="submit-input" />
+    </form>
+    <div>
+        <h1 id="name1"></h1>
+        <h1 id="email1"></h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
